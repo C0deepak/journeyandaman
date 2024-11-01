@@ -15,7 +15,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <link rel="icon" href="images/logos.png" type="image/x-icon" />
+    <link rel="icon" href="images/icon.png" type="image/x-icon" />
     <!-- Stylesheets-->
     <link
       rel="stylesheet"
@@ -112,7 +112,11 @@
                   <div class="rd-navbar-brand"></div>
                 </div>
                 <!--Brand--><a class="brand" href="index.html"
-                  ><img src="images/ttas.png" alt="" width="250" height="330"
+                  ><img
+                    src="images/jalogo.png"
+                    alt=""
+                    width="100"
+                    height="330"
                 /></a>
 
                 <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -122,7 +126,7 @@
                         <div class="unit-left">
                           <span class="icon fa fa-plane"></span>
                         </div>
-                        <div class="unit-body">
+                        <div class="unit-body pt-3">
                           <p><span>Journey Andaman</span></p>
                         </div>
                       </div>
@@ -132,7 +136,7 @@
                         <div class="unit-left">
                           <span class="icon fa fa-clock-o"></span>
                         </div>
-                        <div class="unit-body">
+                        <div class="unit-body pt-3">
                           <p>
                             09:00<span> am</span> — 08:00<span> pm</span> ~
                             <span>IST</span>
@@ -142,12 +146,12 @@
                     </li>
                     <li>
                       <div class="unit unit-spacing-xs">
-                        <div class="unit-left">
+                        <div class="unit-left pt-3">
                           <span class="icon fa fa-phone"></span>
                         </div>
-                        <div class="unit-body">
-                          <a class="link-phone" href="tel:#"
-                            >+91 9679509121 | 9476092202 | 9531811999</a
+                        <div class="unit-body pt-3">
+                          <a class="link-phone" href="tel:+919679509121"
+                            >+91 9679509121</a
                           >
                         </div>
                       </div>
@@ -155,7 +159,7 @@
                   </ul>
                   <a
                     class="button button-md button-default-outline-2 button-ujarak"
-                    href="#"
+                    href="contact-us.html"
                     >Book Now</a
                   >
                 </div>
@@ -205,7 +209,8 @@
           </nav>
         </div>
       </header>
-      <iframe
+
+      <!-- <iframe
         src="https://links.collect.chat/63fcdaf3fec23f546e285e8c"
         width="100%"
         height="600"
@@ -215,7 +220,7 @@
         async
         type="text/javascript"
         src="https://collectcdn.com/embed.js"
-      ></script>
+      ></script> -->
 
       <!-- Contact Form Section -->
       <div class="container my-5">
@@ -244,13 +249,24 @@
             />
           </div>
           <div class="mb-3">
-            <label for="subject" class="form-label">Subject</label>
+            <label for="phone" class="form-label">Phone</label>
             <input
-              type="text"
+              type="tel"
               class="form-control"
-              id="subject"
-              name="subject"
-              placeholder="Subject"
+              id="phone"
+              name="user_phone"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input
+              type="date"
+              class="form-control"
+              id="date"
+              name="date"
+              placeholder="Date"
               required
             />
           </div>
@@ -261,7 +277,7 @@
               id="message"
               name="message"
               rows="5"
-              placeholder="Your Message"
+              placeholder="Type here your query or request for more information on Packages"
               required
             ></textarea>
           </div>
@@ -285,10 +301,7 @@
                     <a href="tel:+919679509121">+91 9679509121</a>
                   </p>
                   <p class="box-contacts-link">
-                    <a href="tel:#"> +91 9476092202</a>
-                  </p>
-                  <p class="box-contacts-link">
-                    <a href="tel:#"> +91 9531811999</a>
+                    <a href="tel:+919474219334"> +919474219334</a>
                   </p>
                 </div>
               </article>
@@ -322,7 +335,7 @@
         </div>
       </section>
 
-      <!-- Contact Us Simple Form -->
+      <!-- Contact Us Form -->
       <div
         class="modal fade"
         id="modalContactForm"
@@ -464,8 +477,7 @@
                 <p class="rights">
                   <span>&copy;&nbsp;</span><span class="copyright-year"></span
                   ><span>&nbsp;</span><span>Journey Andaman</span>. All Rights
-                  Reserved. Designed by
-                  <a href="consultancy.nxtunicorns.com">VYASN</a>
+                  Reserved.
                 </p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">
@@ -498,7 +510,10 @@
       };
     </script>
     <!-- EmailJS Script -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script>
       (function () {
         emailjs.init("zFfqeUTlB9XuFsRk1");
@@ -516,7 +531,7 @@
             .then(
               function (response) {
                 document.getElementById("statusMessage").innerText =
-                  "Message sent successfully!";
+                  "Thank your for reaching us, Our Team will get in touch with you shortly...";
                 document.getElementById("contactForm").reset();
               },
               function (error) {
